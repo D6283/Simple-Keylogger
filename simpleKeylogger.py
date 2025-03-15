@@ -105,7 +105,7 @@ def send_mail():
                 msg.attach(text_attachment)
 
 
-                with smtplib.SMTP('smtp.gmail.com', 587) as server:# Rara vez sabemos lo que pensamos hasta que lo vemos reflejado en los ojos de otro. — Emil Cioran
+                with smtplib.SMTP('smtp.gmail.com', 587) as server:
                     server.starttls()
                     server.login(sender, password)
                     server.sendmail(sender, receiver, msg.as_string())
